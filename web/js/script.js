@@ -5,7 +5,7 @@ const containerChat = document.querySelector("#chat-screen");
 const inputMessage = document.querySelector("#inp-msg")
 const chatBox = document.querySelector("#chat-box")
 
-const wss = new WebSocket("ws://localhost:8000");
+const wss = new WebSocket("wss://chat-ws-8dke.onrender.com");
 
 wss.onopen = () => {
   console.log("WebSocket connection opened successfully!");
