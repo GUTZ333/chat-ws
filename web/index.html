@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat WSS</title>
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="./js/script.js" defer>r</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+  <div id="container" class="w-full max-w-md mx-auto p-6 bg-white rounded shadow-md">
+
+    <form id="form-signin" class="flex flex-col justify-center items-center gap-4">
+      <div class="flex">
+        <h1 class="text-2xl font-bold text-center">Welcome!</h1>
+        <img width="30" src="./assets/favicon.ico" alt="chatbot icon">
+      </div>
+      <input
+        id="inp-username"
+        type="text"
+        placeholder="type your name..."
+        class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+        required
+      />
+      <button
+        class="bg-blue-500 text-white w-full py-2 rounded hover:bg-blue-600 transition"
+        type="submit"
+        id="btn-sign-in"
+      >
+        SignIn
+      </button>
+    </form>
+
+    <div id="chat-screen" class="hidden flex flex-col h-[400px]">
+      <div class="flex justify-between items-center mb-2">
+        <span id="user-display" class="text-sm text-gray-500"></span>
+      </div>
+
+      <div
+        id="chat-box"
+        class="flex-1 overflow-y-auto border p-3 rounded bg-gray-50 space-y-2 h-[400px]"
+      >
+          
+      </div>
+
+      <form
+        id="form-chat"
+        class="mt-4 flex gap-2"
+      >
+        <input
+          id="inp-msg"
+          type="text"
+          placeholder="Digite sua mensagem..."
+          class="flex-1 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-green-500 text-white px-4 rounded hover:bg-green-600 transition"
+        >
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
